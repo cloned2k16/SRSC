@@ -139,14 +139,27 @@ import                          './index.css';
     Extends     (Baguette   , Bread);
     Extends     (Pretzel    , Bread);
 //  ----------------------------------- --------------------------- ---------------------------------
-
+    ShopTile    .prototype.label='NONE'     ;                                                           // eslint-disable-line 
+    Banana      .prototype.label='Banana'   ;                                                           // eslint-disable-line
+    Apple       .prototype.label='Apple'    ;                                                           // eslint-disable-line
+    Orange      .prototype.label='Orange'   ;                                                           // eslint-disable-line
+    Chicken     .prototype.label='Chicken'  ;                                                           // eslint-disable-line
+    Beef        .prototype.label='Beef'     ;                                                           // eslint-disable-line
+    Aubergine   .prototype.label='Aubergine';                                                           // eslint-disable-line
+    Broccoli    .prototype.label='Broccoli' ;                                                           // eslint-disable-line
+    Zucchini    .prototype.label='Zucchini' ;                                                           // eslint-disable-line
+    Baguette    .prototype.label='Baguette' ;                                                           // eslint-disable-line
+    Cherry      .prototype.label='Cherry'   ;                                                           // eslint-disable-line
+    Pork        .prototype.label='Pork'     ;                                                           // eslint-disable-line
+    Carrot      .prototype.label='Carrot'   ;                                                           // eslint-disable-line
+    Pretzel     .prototype.label='Pretzel'  ;                                                           // eslint-disable-line
 //  ----------------------------------- --------------------------- ---------------------------------
 //  ----------------------------------- --------------------------- ---------------------------------
 //  ----------------------------------- --------------------------- ---------------------------------
-    var filter                          = [ { 'type' : 'Meat'       ,'label' : 'Meats'     , 'val' : false}
-                                        ,   { 'type' : 'Fruit'      ,'label' : 'Fruits'    , 'val' : true }
-                                        ,   { 'type' : 'Vegetable'  ,'label' : 'Vegetables', 'val' : false}
-                                        ,   { 'type' : 'Bread'      ,'label' : 'Breads'    , 'val' : false}
+    var filter                          = [ { 'type' : Meat.name        ,'label' : 'Meats'     , 'val' : false}
+                                        ,   { 'type' : Fruit.name       ,'label' : 'Fruits'    , 'val' : true }
+                                        ,   { 'type' : Vegetable.name   ,'label' : 'Vegetables', 'val' : false}
+                                        ,   { 'type' : Bread.name       ,'label' : 'Breads'    , 'val' : false}
                                         ];
 //  ----------------------------------- --------------------------- ---------------------------------
     var menu                            = ['Home', 'Products', 'Services', 'Contact'];             

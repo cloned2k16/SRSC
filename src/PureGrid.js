@@ -17,7 +17,7 @@ extends                                 Component                   {
                   style={oo.imgStyle}
                 >
 
-                <button style={{ backgroundColor : oo.color }}>{oo.className}</button>
+                <button style={{ backgroundColor : oo.color }}>{oo.label}</button>
                 <p >{oo.text}</p>
 
                </div>
