@@ -2,34 +2,31 @@ import React, { Component } from    'react';
 import                              './PureGrid.css';
 
 var     items       = [];
-const   defaultStyle= {     'backgroundImage'  : 'url(img/fruits.jpg)'
-                        ,   'backgroundRepeat' : 'no-repeat'
-                        ,   'backgroundSize'   : '100% 40%'
-};
 
-class                                   PureGrid 
+class                                   PureGrid
 extends                                 Component                   {
-            constructor                 ()                          {
-                super();
-                for(var i=0; i<111; i++){
-                    items[i]='Tile '+i;
-                }
+            constructor                 (oo)                        {
+                super(oo);
+                items=oo.model.getProductList();
+                console.log(items)
             }
 
-            createTile  =   lbl     =>      (
-                
+            createTile  =   oo      =>      (
                 <div id="tileBox" className="pure-u-1-6"
-                 key={lbl}
-                  style={defaultStyle}
+                 key={oo.key}
+                  style={oo.imgStyle}
                 >
-                <button>{lbl}</button>
+
+                <button style={{ backgroundColor : oo.color }}>{oo.className}</button>
+                <p >{oo.text}</p>
+
                </div>
             )
-            
+
             createTiles =   ()      =>      (
                 items.map(this.createTile)
             )
-            
+
             render                      ()                          {
                 return (
                     <div className="pure-g-r">{this.createTiles()}</div>
@@ -39,6 +36,5 @@ extends                                 Component                   {
 };
 
 export default PureGrid;
-            
-            
-            
+
+
