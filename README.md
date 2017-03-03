@@ -1,6 +1,8 @@
 ## SRSC  
 #### (Simple React Shopping Cart )
-
+Check it out! [HERE](https://cloned2k16.github.io/SRSC/)  
+  
+--------------------------------------------------------  
 Inside that directory, you can run several commands:  
 
 ###  npm start  
