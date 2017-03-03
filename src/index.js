@@ -1,6 +1,3 @@
- /* seslint-disable s */
- 
- 
 import React            from    'react';
 import ReactDOM         from    'react-dom';
 import App              from    './App';
@@ -154,16 +151,11 @@ import                          './index.css';
 //  ----------------------------------- --------------------------- ---------------------------------
     var menu                            = ['Home', 'Products', 'Services', 'Contact'];             
 //  ----------------------------------- --------------------------- ---------------------------------
-    var onFilterChange                  = (filterArray)             =>                              {
-        _log("update rendering",filterArray);
-    }
-//  ----------------------------------- --------------------------- ---------------------------------
     ReactDOM.render(
         <App model={_APP.model} 
              filter={filter} 
-             menu={menu}
-             update={onFilterChange}                                                                />,
-            _byId('root')
+             menu={menu}                                                                            />,
+        _byId('root')
     );
 //  ----------------------------------- --------------------------- ---------------------------------
 
