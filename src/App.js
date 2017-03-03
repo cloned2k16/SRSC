@@ -11,7 +11,9 @@ class App  extends Component {
     state                       =   { model: this.props.model, filter : this.props.filter }
     
     onFilterChange              =  (flt) => {
-        console.log('changed:',flt);
+        console.log("chanhged",flt)
+        var ff=this.state.filter
+        this.setState(({ flt }) => ({ filter: ff }));
     }
     
     render                      () {

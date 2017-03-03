@@ -143,10 +143,10 @@ import                          './index.css';
 //  ----------------------------------- --------------------------- ---------------------------------
 //  ----------------------------------- --------------------------- ---------------------------------
 //  ----------------------------------- --------------------------- ---------------------------------
-    var filter                          = [ { 'label' : 'Meats'     , 'val' : false}
-                                        ,   { 'label' : 'Fruits'    , 'val' : true }
-                                        ,   { 'label' : 'Vegetable' , 'val' : false}
-                                        ,   { 'label' : 'Bread'     , 'val' : false}
+    var filter                          = [ { 'type' : 'Meat'       ,'label' : 'Meats'     , 'val' : false}
+                                        ,   { 'type' : 'Fruit'      ,'label' : 'Fruits'    , 'val' : true }
+                                        ,   { 'type' : 'Vegetable'  ,'label' : 'Vegetables', 'val' : false}
+                                        ,   { 'type' : 'Bread'      ,'label' : 'Breads'    , 'val' : false}
                                         ];
 //  ----------------------------------- --------------------------- ---------------------------------
     var menu                            = ['Home', 'Products', 'Services', 'Contact'];             

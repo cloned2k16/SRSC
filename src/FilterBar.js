@@ -9,26 +9,21 @@ extends                                 Component                   {
     
     constructor                         (props)                     {
         super(props);
-        this.orgArray   =   props.filterArray;
-        this.fltArray   =   [];
-        var oa          = props.filterArray;
-        for (var i in oa){
-            if (oa.hasOwnProperty(i)){
-             var chkB=props.filterArray[i];
-             this.fltArray[chkB.label]=chkB.val;
-            }
-        }
-        console.log(this.fltArray)
         this.updateFn   =   props.update;
     }
 
-    state                 = {  filt: this.props.filterArray  }
+    state                 = {  filter: this.props.filterArray  }
     
     toggleCheckbox          = (label,val) =>              {
-        
-        this.fltArray[label]= !val.state.isChecked; 
-        this.updateFn(this.fltArray);
-        
+        var flt=this.state.filter
+        ,   len=flt.length
+        ;
+        for (var i=0; i<len; i++) {
+           if (flt[i].label===label){
+               flt[i].val=!val.state.isChecked;
+           }    
+        }
+        this.updateFn(flt);
     }
   
     createCheckbox          = oo =>                 (
@@ -39,7 +34,7 @@ extends                                 Component                   {
     
     render                              ()                          {
         return ( 
-        <div><ul>{ this.orgArray.map( this.createCheckbox ) }</ul></div>
+        <div><ul>{ this.state.filter.map( this.createCheckbox ) }</ul></div>
         );
     };
     
