@@ -1,0 +1,35 @@
+#headBar                {
+    background          :   #EaEaEa;
+    height              :   64px;
+}
+
+#headBar2               {
+    background          :   #EaEaEa;
+    height              :   64px;
+}
+
+#filterBar              {
+    position            :   absolute;
+    left                :   10px;
+}
+
+#menuBar                {
+    position            :   absolute;
+    right               :   10px;
+    top                 :   10px;
+}
+
+#brandId                {
+    background          :   #EEE;
+    position            :   absolute;
+    left                :   10px;
+    top                 :   10px;
+
+    display             :   flex;
+    flex-direction      :   row;
+    flex-wrap           :   no-wrap;
+    justify-content     :   center;
+    align-items         :   center;
+}
+
+

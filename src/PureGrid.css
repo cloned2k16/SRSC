@@ -1,0 +1,17 @@
+#gridView                               {
+    background                          :   #ddd;
+    
+}
+
+#tileBox                                {
+    height                              :   256px;
+    background                          :   #aef;
+    padding                             :    2px 2px  2px  2px;
+    margin                              :   10px 0px 10px 10px; 
+}
+
+#tileBox button                         {
+    position                            :   relative;
+    bottom                              :   80%;    
+    left                                :   35%;
+}

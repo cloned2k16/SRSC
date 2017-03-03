@@ -1,0 +1,23 @@
+#filterBar ul                           {
+    list-style                          :   none;
+    display                             :   inline-block;
+}
+
+#filterBar ul li                        {
+    display                             :   inline-block;
+    padding                             :   10px 20px;
+    cursor                              :   pointer;
+    background-color                    :   #eee;
+    color                               :   #737267;
+    
+    transition                          :   0.13s;
+}
+
+#filterBar ul li:hover                  {
+    background-color                    :   #beecea;
+}
+
+#filterBar ul li.focused                {
+    color                               :   #fff;
+    background-color                    :   #41c7c2;
+}

@@ -1,0 +1,29 @@
+
+#menuBar ul                             {
+    list-style                          :   none;
+    display                             :   inline-block;
+}
+
+#menuBar ul li                          {
+    display                             :   inline-block;
+    padding                             :   10px 20px;
+    cursor                              :   pointer;
+    background-color                    :   #eee;
+    color                               :   #7B8585;
+    
+    transition                          :   0.13s;
+}
+
+#menuBar ul li:hover                    {
+    background-color                    :   #beecea;
+}
+
+#menuBar ul li.focused                  {
+    color                               :   #fff;
+    background-color                    :   #41c7c2;
+}
+
+#menuBar p                              {
+    padding-top                         :   15px;
+    font-size                           :   12px;
+}
