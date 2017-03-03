@@ -1,13 +1,9 @@
  /* seslint-disable s */
  
+ 
 import React            from    'react';
 import ReactDOM         from    'react-dom';
 import App              from    './App';
-import MenuBar          from    './MenuBar';
-import FilterBar        from    './FilterBar';
-import PureGrid         from    './PureGrid';
-import BrandIdentity    from    './BrandIdentity';
-
 import                          './index.css';
 
 //  ----------------------------------- --------------------------- ---------------------------------
@@ -51,8 +47,6 @@ import                          './index.css';
                                     ,   'backgroundRepeat' : 'no-repeat'
                                     ,   'backgroundSize'   : '100% 40%'
                         };  
-                        _log(p.imgStyle)
-
                         list.push(p);
                     }
                     return list;
@@ -152,32 +146,25 @@ import                          './index.css';
 //  ----------------------------------- --------------------------- ---------------------------------
 //  ----------------------------------- --------------------------- ---------------------------------
 //  ----------------------------------- --------------------------- ---------------------------------
+    var filter                          = [ { 'label' : 'Meats'     , 'val' : false}
+                                        ,   { 'label' : 'Fruits'    , 'val' : true }
+                                        ,   { 'label' : 'Vegetable' , 'val' : false}
+                                        ,   { 'label' : 'Bread'     , 'val' : false}
+                                        ];
+//  ----------------------------------- --------------------------- ---------------------------------
+    var menu                            = ['Home', 'Products', 'Services', 'Contact'];             
+//  ----------------------------------- --------------------------- ---------------------------------
+    var onFilterChange                  = (filterArray)             =>                              {
+        _log("update rendering",filterArray);
+    }
 //  ----------------------------------- --------------------------- ---------------------------------
     ReactDOM.render(
-        <App                                                                                        />,
+        <App model={_APP.model} 
+             filter={filter} 
+             menu={menu}
+             update={onFilterChange}                                                                />,
             _byId('root')
     );
-//  ----------------------------------- --------------------------- ---------------------------------
-    ReactDOM.render(
-        <MenuBar items={ ['Home', 'Products', 'Services', 'Contact'] }                              />,
-            _byId('menuBar')
-    );
-//  ----------------------------------- --------------------------- ---------------------------------
-    ReactDOM.render(
-        <FilterBar choices={[Meat,Fruit,Vegetable,Bread]}                                           />,
-            _byId('filterBar')
-    );
-//  ----------------------------------- --------------------------- ---------------------------------
-    ReactDOM.render(
-        <BrandIdentity                                                                              />,
-            _byId('brandIdentity')
-    );
-//  ----------------------------------- --------------------------- ---------------------------------
-    ReactDOM.render(
-        <PureGrid model={_APP.model}                                                                 />,
-            _byId('gridView')
-    );
-//  ----------------------------------- --------------------------- ---------------------------------
 //  ----------------------------------- --------------------------- ---------------------------------
 
     

@@ -5,10 +5,13 @@ var     items       = [];
 
 class                                   PureGrid
 extends                                 Component                   {
+    
+            state                 = {  filt: this.props.filter  }
+                
             constructor                 (oo)                        {
                 super(oo);
-                items=oo.model.getProductList();
-                console.log(items)
+                items           =   oo.model.getProductList();
+//                console.log(oo.filter)
             }
 
             createTile  =   oo      =>      (

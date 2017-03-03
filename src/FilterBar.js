@@ -5,41 +5,41 @@ import                              './FilterBar.css';
 
 class                                   FilterBar  
 extends                                 Component                   {
+    
+    
     constructor                         (props)                     {
         super(props);
-        
+        this.orgArray   =   props.filterArray;
         this.fltArray   =   [];
-        var choices     =   props.choices;
-        
-        
-        for (var ch in choices){
-         if (choices.hasOwnProperty(ch)){
-          var chk=props.choices[ch].name;   
-          console.log(chk)  
-          this.fltArray[chk+'s']=false;
-         } 
+        var oa          = props.filterArray;
+        for (var i in oa){
+            if (oa.hasOwnProperty(i)){
+             var chkB=props.filterArray[i];
+             this.fltArray[chkB.label]=chkB.val;
+            }
         }
-        
-        
+        console.log(this.fltArray)
+        this.updateFn   =   props.update;
     }
 
-    toggleCheckbox          = label =>              {
+    state                 = {  filt: this.props.filterArray  }
+    
+    toggleCheckbox          = (label,val) =>              {
         
-        this.fltArray[label]= !this.fltArray[label];
-        console.log(this.fltArray)
+        this.fltArray[label]= !val.state.isChecked; 
+        this.updateFn(this.fltArray);
+        
     }
-  
-  
   
     createCheckbox          = oo =>                 (
     
-        <li key={oo.name}><Checkbox label={oo.name + "s"}
+        <li key={oo.label}><Checkbox label={oo.label} value={oo.val}
                             handleCheckboxChange={this.toggleCheckbox}  /></li>
     )
     
     render                              ()                          {
         return ( 
-        <div><ul>{ this.props.choices.map( this.createCheckbox ) }</ul></div>
+        <div><ul>{ this.orgArray.map( this.createCheckbox ) }</ul></div>
         );
     };
     
