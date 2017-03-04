@@ -12,7 +12,7 @@ extends                                 Component                   {
             }
             
             createTile  =   oo      =>      (
-                <div id="tileBox" className="pure-u-1-6"
+                <div id="tileBox" className="pure-u-1 pure-u-md-1-6"
                  key={oo.key}
                   style={oo.imgStyle}
                 >
@@ -51,7 +51,7 @@ extends                                 Component                   {
                 var numShown=this.toShow.length;
                 console.log('num shown',numShown);
                 return (
-                    <div className="pure-g-r">{this.createTiles()}</div>
+                    <div className="pure-g">{this.createTiles()}</div>
                 );
             }
 
