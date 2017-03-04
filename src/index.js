@@ -110,28 +110,37 @@ import                          './index.css';
     }
 
     function    Cherry                  ()  {   Cherry      .prototype.super(this);                     // eslint-disable-line
-                                                this.backColor='#FFE'; }
+        this.image          = "url('img/cherry.jpg')"
+        this.backColor='#FFE'; 
+    }
 
     Extends     (Banana     , Fruit);
     Extends     (Apple      , Fruit);
     Extends     (Orange     , Fruit);
     Extends     (Cherry     , Fruit);
 //  ----------------------------------- --------------------------- ---------------------------------
-    function    Chicken                 ()  {   Chicken     .prototype.super(this); }                   // eslint-disable-line
+    function    Chicken                 ()  {   Chicken     .prototype.super(this);                     // eslint-disable-line
+        this.image          = "url('img/pollo.jpg')"
+    }
     function    Beef                    ()  {   Beef        .prototype.super(this); }                   // eslint-disable-line
     function    Pork                    ()  {   Pork        .prototype.super(this);                     // eslint-disable-line
-                                                this.backColor='#FEE'; }    
+        this.image          = "url('img/pork.jpg')"
+        this.backColor='#FEE';     
+    }
 
     Extends     (Chicken    , Meat);
     Extends     (Beef       , Meat);
     Extends     (Pork       , Meat);
 //  ----------------------------------- --------------------------- ---------------------------------
-    function    Aubergine               ()  {   Aubergine   .prototype.super(this); }                   // eslint-disable-line
+    function    Aubergine               ()  {   Aubergine   .prototype.super(this);                     // eslint-disable-line
+        this.image          = "url('img/aubergine.jpg')"
+    }
     function    Broccoli                ()  {   Broccoli    .prototype.super(this);                     // eslint-disable-line
         this.image          = "url('img/broccoli.jpg')"
     }
-
-    function    Zucchini                ()  {   Zucchini    .prototype.super(this); }                   // eslint-disable-line
+    function    Zucchini                ()  {   Zucchini    .prototype.super(this);                     // eslint-disable-line
+        this.image          = "url('img/zucchini.jpg')"
+    }
     function    Carrot                  ()  {   Carrot      .prototype.super(this);                     // eslint-disable-line
         this.image          = "url('img/carrot.jpg')"
         this.backColor='#FDD'; 
@@ -146,7 +155,9 @@ import                          './index.css';
         this.image          = "url('img/baguette.jpg')"
     }
     function    Pretzel                 ()  {   Pretzel     .prototype.super(this);                     // eslint-disable-line
-                                                this.backColor='#DFF'; }                        
+        this.image          = "url('img/pretzel.jpg')"
+        this.backColor='#DFF'; 
+    }                        
 
     Extends     (Baguette   , Bread);
     Extends     (Pretzel    , Bread);
