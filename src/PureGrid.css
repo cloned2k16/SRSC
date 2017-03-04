@@ -13,7 +13,7 @@
 
 #tileBox button                         {
     position                            :   relative;
-    top                                 :   40%;
+    top                                 :   66px;
     left                                :   33%;
     padding                             :   4px 7px;
     cursor                              :   pointer;
@@ -25,5 +25,5 @@
 
 #tileBox p                              {
     position                            :   relative;
-    top                                 :   25%;
+    top                                 :   32%;
 }
