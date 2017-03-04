@@ -92,7 +92,7 @@ import                          './index.css';
     }
 //  ----------------------------------- --------------------------- ---------------------------------
     function    Bread                   ()  {   Bread       .prototype.super(this);                     // eslint-disable-line
-        this.color          = '#E04040'
+        this.color          = '#D0D040'
         this.image          = "url('img/breads.jpg')"
     }
 //  ----------------------------------- --------------------------- ---------------------------------
