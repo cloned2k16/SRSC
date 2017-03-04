@@ -13,8 +13,8 @@
 
 #tileBox button                         {
     position                            :   relative;
-    top                                 :   66px;
-    left                                :   33%;
+    top                                 :   48px;
+    right                               :   -20%;
     padding                             :   4px 7px;
     cursor                              :   pointer;
     border                              :   none;
@@ -25,5 +25,12 @@
 
 #tileBox p                              {
     position                            :   relative;
-    top                                 :   32%;
+    top                                 :   56px;
+}
+
+#tileBox div                            {
+    background                          :   #eee;
+    top                                 :   10px;
+    left                                :   0px;
+    width                               :   32px;
 }

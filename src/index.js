@@ -39,7 +39,7 @@ import                          './index.css';
                     ;
                     for (var i = 0; i < numProd; i++) {
                         var p=this.randomProduct();
-                        p.key       =i;
+                        p.key       =i+1;
                         p.imgStyle  ={  'backgroundImage'  : p.image
                                     ,   'backgroundRepeat' : 'no-repeat'
                                     ,   'backgroundSize'   : '100% 40%'
