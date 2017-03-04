@@ -101,9 +101,14 @@ import                          './index.css';
     Extends     (Meat       , ShopTile);
     Extends     (Bread      , ShopTile);
 //  ----------------------------------- --------------------------- ---------------------------------
-    function    Banana                  ()  {   Banana      .prototype.super(this); }                   // eslint-disable-line    
+    function    Banana                  ()  {   Banana      .prototype.super(this);                     // eslint-disable-line    
+        this.image          = "url('img/banana.jpg')"
+    }
     function    Apple                   ()  {   Apple       .prototype.super(this); }                   // eslint-disable-line
-    function    Orange                  ()  {   Orange      .prototype.super(this); }                   // eslint-disable-line
+    function    Orange                  ()  {   Orange      .prototype.super(this);                     // eslint-disable-line
+        this.image          = "url('img/orange.jpg')"
+    }
+
     function    Cherry                  ()  {   Cherry      .prototype.super(this);                     // eslint-disable-line
                                                 this.backColor='#FFE'; }
 
@@ -122,17 +127,24 @@ import                          './index.css';
     Extends     (Pork       , Meat);
 //  ----------------------------------- --------------------------- ---------------------------------
     function    Aubergine               ()  {   Aubergine   .prototype.super(this); }                   // eslint-disable-line
-    function    Broccoli                ()  {   Broccoli    .prototype.super(this); }                   // eslint-disable-line
+    function    Broccoli                ()  {   Broccoli    .prototype.super(this);                     // eslint-disable-line
+        this.image          = "url('img/broccoli.jpg')"
+    }
+
     function    Zucchini                ()  {   Zucchini    .prototype.super(this); }                   // eslint-disable-line
     function    Carrot                  ()  {   Carrot      .prototype.super(this);                     // eslint-disable-line
-                                                this.backColor='#FDD'; }    
+        this.image          = "url('img/carrot.jpg')"
+        this.backColor='#FDD'; 
+    }    
 
     Extends     (Aubergine  , Vegetable);
     Extends     (Broccoli   , Vegetable);
     Extends     (Zucchini   , Vegetable);
     Extends     (Carrot     , Vegetable);
 //  ----------------------------------- --------------------------- ---------------------------------
-    function    Baguette                ()  {   Baguette    .prototype.super(this); }                   // eslint-disable-line
+    function    Baguette                ()  {   Baguette    .prototype.super(this);                     // eslint-disable-line
+        this.image          = "url('img/baguette.jpg')"
+    }
     function    Pretzel                 ()  {   Pretzel     .prototype.super(this);                     // eslint-disable-line
                                                 this.backColor='#DFF'; }                        
 
