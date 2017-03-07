@@ -179,10 +179,10 @@ import                          './index.css';
 //  ----------------------------------- --------------------------- ---------------------------------
 //  ----------------------------------- --------------------------- ---------------------------------
 //  ----------------------------------- --------------------------- ---------------------------------
-    var filter                          = [ { 'type' : Meat.name        ,'label' : 'Meats'     , 'val' : false}
+    var filter                          = [ { 'type' : Meat.name        ,'label' : 'Meats'     , 'val' : true }
                                         ,   { 'type' : Fruit.name       ,'label' : 'Fruits'    , 'val' : true }
-                                        ,   { 'type' : Vegetable.name   ,'label' : 'Vegetables', 'val' : false}
-                                        ,   { 'type' : Bread.name       ,'label' : 'Breads'    , 'val' : false}
+                                        ,   { 'type' : Vegetable.name   ,'label' : 'Vegetables', 'val' : true }
+                                        ,   { 'type' : Bread.name       ,'label' : 'Breads'    , 'val' : true }
                                         ];
 //  ----------------------------------- --------------------------- ---------------------------------
     var menu                            = ['Home', 'Products', 'Services', 'Contact'];             
