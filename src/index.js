@@ -37,7 +37,7 @@ import                          './index.css';
                 }
         }
     ,   _APP            =   {
-                version         :   '0.0.2'
+                version         :   '0.0.3'
             ,   author          :   'Paolo Lioy'
             ,   model           :   DB_model
         }
@@ -65,9 +65,9 @@ import                          './index.css';
         this.text       =   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     }
 //  ----------------------------------- --------------------------- ---------------------------------
-    ShopTile    .prototype.label='NONE'     ;                                                           // eslint-disable-line 
+    ShopTile    .prototype.label        ='NONE';                                                        // eslint-disable-line 
 //  ----------------------------------- --------------------------- ---------------------------------
-    var products                        =   ['Vegetable'
+    var categories                      =   ['Vegetable'
                                             ,'Fruit'
                                             ,'Meat'
                                             ,'Bread'
@@ -76,20 +76,32 @@ import                          './index.css';
                                             ,'Broccoli'
                                             ,'Zucchini'
                                             ,'Carrot'
+                                            ,'Cauliflower'
+                                            ,'Asparagus'
+                                            ,'Spinach'
                                         ]
     ,   fruits                          =   ['Banana'
                                             ,'Apple'
                                             ,'Orange'
                                             ,'Cherry'
+                                            ,'Mango'
+                                            ,'Coconut'
+                                            ,'Lemon'
+                                            ,'Lychee'
                                         ]
     ,   meats                           =   ['Chicken'
                                             ,'Beef'
                                             ,'Pork'
+                                            ,'Lamb'
+                                            ,'Goat'
                                         ]
     ,   breads                          =   ['Baguette'
                                             ,'Pretzel'
+                                            ,'Brioche'
+                                            ,'Ciabatta'
                                         ]
-    ,   createObjects                   =   (bundle,list)  =>  {
+    ,   createObjects                   =   (bundle ,outList)       =>  {                               //  build a list of Function extending a specific Function (OO alike) 
+                                                                                                        //  and store them in outList
         var k
         ,   i
         ,   o
@@ -122,30 +134,30 @@ import                          './index.css';
                 Extends(oo,knd);            
                 eval (nm+'.prototype.label="'+nm+'"');                                                  // eslint-disable-line
                 eval (nm+'.prototype.image="'+nm+'"');                                                  // eslint-disable-line
-                list.push(oo);
+                outList.push(oo);
             }
         }
     }
-    ,   categories                      =   [];
+    ,   catList                         =   [];
     ;
     
-    createObjects (    [{ 'kind' : ShopTile  , 'list' : products     }]
-                    ,categories);
+    createObjects (    [{ 'kind' : ShopTile     , 'list' : categories   }]
+                    ,catList);
     
-    createObjects (    [{ 'kind' : categories[0] , 'list' : vegetables   }
-                    ,   { 'kind' : categories[1] , 'list' : fruits       }
-                    ,   { 'kind' : categories[2] , 'list' : meats        }
-                    ,   { 'kind' : categories[3] , 'list' : breads       }
+    createObjects (    [{ 'kind' : catList[0]   , 'list' : vegetables   }
+                    ,   { 'kind' : catList[1]   , 'list' : fruits       }
+                    ,   { 'kind' : catList[2]   , 'list' : meats        }
+                    ,   { 'kind' : catList[3]   , 'list' : breads       }
                     ]
                     ,_APP.model.productTypes);
     ;
 //  ----------------------------------- --------------------------- ---------------------------------
 //  ----------------------------------- --------------------------- ---------------------------------
 //  ----------------------------------- --------------------------- ---------------------------------
-    var filter                          = [ { 'type' : categories[2].name ,'label' : 'Meats'     , 'val' : true }
-                                        ,   { 'type' : categories[1].name ,'label' : 'Fruits'    , 'val' : true }
-                                        ,   { 'type' : categories[0].name ,'label' : 'Vegetables', 'val' : true }
-                                        ,   { 'type' : categories[3].name ,'label' : 'Breads'    , 'val' : true }
+    var filter                          = [ { 'type' : catList[2].name ,'label' : 'Meats'     , 'val' : true }
+                                        ,   { 'type' : catList[1].name ,'label' : 'Fruits'    , 'val' : true }
+                                        ,   { 'type' : catList[0].name ,'label' : 'Vegetables', 'val' : true }
+                                        ,   { 'type' : catList[3].name ,'label' : 'Breads'    , 'val' : true }
                                         ];
 //  ----------------------------------- --------------------------- ---------------------------------
     var menu                            = ['Home', 'Products', 'Services', 'Contact'];             
