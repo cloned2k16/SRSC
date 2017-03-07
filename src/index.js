@@ -37,7 +37,7 @@ import                          './index.css';
                 }
         }
     ,   _APP            =   {
-                version         :   '0.0.1'
+                version         :   '0.0.2'
             ,   author          :   'Paolo Lioy'
             ,   model           :   DB_model
         }
@@ -112,7 +112,7 @@ import                          './index.css';
             lst = o.list;
             for (i = 0 ; i< lst.length ; i++ ){
                 nm = lst[i];
-                eval ('window. '+nm+'= function '+nm+'(){ '+nm                                                // eslint-disable-line
+                eval ('window. '+nm+'= function '+nm+'(){ '+nm                                          // eslint-disable-line
                         +'.prototype.super(this);'
                         + (imageExists('img/'+nm+'.jpg')
                         ? 'this.image= "url(img/'+nm+'.jpg)";'
