@@ -71,6 +71,7 @@ import                          './index.css';
                                             ,'Fruit'
                                             ,'Meat'
                                             ,'Bread'
+                                            ,'Toy'
                                         ]
     ,   vegetables                      =   ['Aubergine'
                                             ,'Broccoli'
@@ -100,6 +101,7 @@ import                          './index.css';
                                             ,'Brioche'
                                             ,'Ciabatta'
                                         ]
+    ,   toys                            =   ['GameBoy']
     ,   createObjects                   =   (bundle ,outList)       =>  {                               //  build a list of Function extending a specific Function (OO alike) 
                                                                                                         //  and store them in outList
         var k
@@ -148,6 +150,7 @@ import                          './index.css';
                     ,   { 'kind' : catList[1]   , 'list' : fruits       }
                     ,   { 'kind' : catList[2]   , 'list' : meats        }
                     ,   { 'kind' : catList[3]   , 'list' : breads       }
+                    ,   { 'kind' : catList[4]   , 'list' : toys         }
                     ]
                     ,_APP.model.productTypes);
     ;
@@ -158,6 +161,7 @@ import                          './index.css';
                                         ,   { 'type' : catList[1].name ,'label' : 'Fruits'    , 'val' : true }
                                         ,   { 'type' : catList[0].name ,'label' : 'Vegetables', 'val' : true }
                                         ,   { 'type' : catList[3].name ,'label' : 'Breads'    , 'val' : true }
+                                        ,   { 'type' : catList[4].name ,'label' : 'Toys'      , 'val' : true }
                                         ];
 //  ----------------------------------- --------------------------- ---------------------------------
     var menu                            = ['Home', 'Products', 'Services', 'Contact'];             
