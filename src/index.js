@@ -110,6 +110,7 @@ import                          './index.css';
         ,   i
         ,   o
         ,   nm
+		,   iNm
         ,   oo
         ,   lst
         ,   knd
@@ -141,10 +142,11 @@ import                          './index.css';
             lst = o.list;
             for (i = 0 ; i< lst.length ; i++ ){
                 nm = lst[i];
+				iNm='img/'+nm+'.jpg';
                 eval ('window. '+nm+'= function '+nm+'(){ '+nm                                          // eslint-disable-line
                         +'.prototype.super(this);'
-                        + (imageExists('img/'+nm+'.jpg')
-                        ? 'this.image= "url(img/'+nm+'.jpg)";'
+                        + (imageExists(iNm)
+                        ? 'this.image= "url('+iNm+')";'
                         : '')
                         +'}');
                 oo=eval(nm);                                                                            // eslint-disable-line
